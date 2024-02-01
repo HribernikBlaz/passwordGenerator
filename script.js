@@ -1,27 +1,39 @@
 const passwordBox = document.getElementById("password");
-const length = 12;
+const lengthInput = document.getElementById("length");
+const uppercaseCheckbox = document.getElementById("uppercase");
+const lowercaseCheckbox = document.getElementById("lowercase");
+const numbersCheckbox = document.getElementById("numbers");
+const symbolsCheckbox = document.getElementById("symbols");
 
-const upperCase = "ABCDEFGHIJKLMOPRSTUVZQWXY";
-const lowerCase = "abcdefghijklmnoprstuvzqwxy";
-const numer = "1234567890";
-const symbol = "?!=-/<>[]{}()_|~&$@^*#+"
+function createPassword() {
+    const length = parseInt(lengthInput.value);
+    const useUppercase = uppercaseCheckbox.checked;
+    const useLowercase = lowercaseCheckbox.checked;
+    const useNumbers = numbersCheckbox.checked;
+    const useSymbols = symbolsCheckbox.checked;
 
-const allCharacters = upperCase + lowerCase + numer + symbol;
-function createPassword(){
+    let characters = "";
     let password = "";
-    password += upperCase[Math.floor(Math.random() * upperCase.length)];
-    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-    password += numer[Math.floor(Math.random() * numer.length)];
-    password += symbol[Math.floor(Math.random() * symbol.length)];
-    
-    while(length > password.length){
-        password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
+
+    if (useUppercase) characters += "ABCDEFGHIJKLMOPRSTUVZQWXY";
+    if (useLowercase) characters += "abcdefghijklmnoprstuvzqwxy";
+    if (useNumbers) characters += "1234567890";
+    if (useSymbols) characters += "?!=-/<>[]{}()_|~&$@^*#+";
+
+    if (!useUppercase && !useLowercase && !useNumbers && !useSymbols) {
+        document.querySelector(".error").style.display = "block";
+        return;
+    } else {
+        document.querySelector(".error").style.display = "none";
+        for (let i = 0; i < length; i++) {
+            password += characters[Math.floor(Math.random() * characters.length)];
+        }
+        passwordBox.value = password;
     }
-    passwordBox.value = password;
+
 }
 
-
-function copyPassword(){
+function copyPassword() {
     passwordBox.select();
     document.execCommand("copy");
 }

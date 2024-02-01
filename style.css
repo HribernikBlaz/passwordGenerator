@@ -4,8 +4,13 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+:root{
+    --base-color: #95c3d0;
+    --background-color: #002339;
+}
+
 body{
-    background: #002339;
+    background: var(--background-color);
     color: #fff;
 }
 .container{
@@ -15,8 +20,8 @@ body{
 }
 .display{
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     background: #fff;
     color: #333;
     display: flex;
@@ -28,12 +33,54 @@ body{
 .container h1{
     font-weight: 500;
     font-size:45px; 
+    margin-bottom: 20px;
 }
 .container h1 span{
-    color: #019f55;
-    border-bottom: 4px solid #019f55;
+    color: var(--base-color);
+    border-bottom: 4px solid var(--base-color);
     padding-bottom: 7px;
 }
+
+
+.checkboxes{
+    margin: 10px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dva stolpca */
+    max-width: 300px;
+}
+
+.options {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.options label {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.options input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.options input[type="checkbox"] {
+    width: 18px; 
+    height: 18px; 
+    cursor: pointer;
+}
+
+.error{
+    color:#de6363;
+    display: none;
+}
+.btnGenerate{
+    margin: 10px 0 0 0;
+}
+
 .display img{
     width: 30px;
     cursor: pointer;
@@ -42,6 +89,7 @@ body{
     border: 0;
     outline: 0;
     font-size: 24px;
+    width: 90%;
 }
 .container button img{
     width: 28px;
@@ -50,7 +98,7 @@ body{
 .container button{
     border:0;
     outline:0;
-    background: #019f55;
+    background: var(--base-color);
     color: #fff;
     font-size: 22px;
     font-weight: 300;
