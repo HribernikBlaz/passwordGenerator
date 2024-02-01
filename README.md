@@ -27,7 +27,7 @@ Generate strong and secure passwords with the Random Password Generator. Customi
 
 ## Preview 📷
 
-[Live Demo](#) *(https://blazhribernik-passwordgenerator.netlify.app/)*
+https://blazhribernik-passwordgenerator.netlify.app/
 
 ## Styling 🎨
 
