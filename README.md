@@ -25,10 +25,6 @@ Generate strong and secure passwords with the Random Password Generator. Customi
 - CSS
 - JavaScript
 
-## Preview 📷
-
-https://blazhribernik-passwordgenerator.netlify.app/
-
 ## Styling 🎨
 
 The application features a clean and user-friendly interface with a dark background to enhance readability and aesthetics. The password display is highlighted for easy identification.
@@ -44,6 +40,10 @@ Easily copy the generated password to the clipboard with the click of a button. 
 ## Code Structure 🧱
 
 The JavaScript file (`script.js`) contains functions to handle password generation and copying to the clipboard. The CSS file (`style.css`) is responsible for styling the interface.
+
+## Preview 📷
+
+https://blazhribernik-passwordgenerator.netlify.app/
 
 
 *Note: Please make sure to handle secure storage and transmission of generated passwords as appropriate for your application's security requirements.*
