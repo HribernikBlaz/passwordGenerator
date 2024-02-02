@@ -43,7 +43,7 @@ The JavaScript file (`script.js`) contains functions to handle password generati
 
 ## Preview 📷
 
-[QR Code Generator Preview](https://blazhribernik-passwordgenerator.netlify.app/) <!-- Replace with the URL to the live preview if available -->
+[Random Password Generator Preview](https://blazhribernik-passwordgenerator.netlify.app/) <!-- Replace with the URL to the live preview if available -->
 
 
 *Note: Please make sure to handle secure storage and transmission of generated passwords as appropriate for your application's security requirements.*
